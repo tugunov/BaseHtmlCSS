@@ -1,104 +1,124 @@
-/*https://jsfiddle.net/59k71vLc/19/*/
-
-/*2*/
 body {
     background-color: #f8f8f8;
 }
-/*3a*/
-header {
+
+.header {
     color: navy;
     font-size: 15px;
     font-family: sans-serif;
     font-weight: bold;
 }
-/*3b - убрать в меню сайта маркеры списка*/
-header > ul {
+
+.header ul {
     list-style-type: none;
 }
+
+.header a:hover{
+    color:red;
+}
+
+
 /*4a - настройки заголовков на странице товара*/
-.product h3{
+
+.product h3 {
     color: black;
     font-size: 18px;
     font-weight: 400;
     background-color: #eaeaea;
 }
+
 /*4b - настройки текста краткого описания товара*/
-.short_description p, .short_description ul{
+
+.short_description p,
+.short_description ul {
     color: #707070;
     font-size: 14px;
     font-style: italic;
     line-height: 16px;
 }
+
 /*4c - настройки текста полного описания товара*/
-.long_description p, .long_description ul{
-    color:#484343;
+
+.long_description p,
+.long_description ul {
+    color: #484343;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     text-align: left;
 }
+
 /*4d - настройки списка в разделе Характеристики товара*/
-.charact ul{
+
+.charact ul {
     font-family: sans-serif;
     list-style-image: url(images/defmix_1157.png);
     font-size: 14px;
 
 }
+
 /*5  настройки страницы Контакты и полей ввода*/
+
 /*5а - значения ширины и высоты полей ввода*/
+
 input {
     width: 300px;
-    height:20px;
+    height: 20px;
 }
 
 textarea {
     width: 40%;
 }
-button{
+
+button {
     width: 10%;
     font-weight: bold
 }
 
 /*5b - стили для текста внутри полей input*/
-input[type="text"], input[type="email"], textarea {
+
+input[type="text"],
+input[type="email"],
+textarea {
     font-family: sans-serif;
     font-size: 20px;
     color: darkblue;
 }
+
+input[type="email"]:focus{
+    color:aqua;
+    background-color: azure;
+}
+
+input[type="text"] {
+    text-transform: capitalize;
+}
+
+table{
+    width: 400px;
+	height: 300px;
+	border: 1px solid #000;
+	border-collapse: collapse;
+}
+td{
+    border: 1px solid #000;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	text-align: center;
+}
+
 /*6*/
 
 /*7*/
-.cat img[alt]{
+
+.cat img[alt] {
     width: 20%;
 }
 
-.product img{
+.product img {
     width: 30%;
-    border-color: darkgray
-        ;
+    border-color: darkgray;
     border-style: double;
     border-width: (3px 3px);
 }
-
-/*
-h2 {
-    color: brown;
-}
-h3 {
-    color: green;
-*/
-/*обращение к классу*/
-/*
-.heading {
-    background-color: #ccc;
-}
-.text {
-    font-size: 24px;
-}
-5a
-input[type="text"]{
-    width: 150px;
-    height:15px;
-    color: blueviolet;
-    font-size: : 20px;
-}*/
