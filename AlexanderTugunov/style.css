@@ -1,5 +1,8 @@
-body {
+.container {
     background-color: #f8f8f8;
+    width: 700px;
+    margin: 0 auto;
+    /*    margin: 0;*/
 }
 
 .header {
@@ -7,18 +10,44 @@ body {
     font-size: 15px;
     font-family: sans-serif;
     font-weight: bold;
+    border-bottom: 1px solid black;
+
+    background-image: url(images/header_sky.jpg);
+    background-blend-mode: saturation;
+
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.header ul {
+.logo {
+    padding-left: 20px;
+
+}
+
+.menu {
     list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-.header a:hover{
-    color:red;
+.menu li {
+    width: 100px;
+    height: 45px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
+.menu a:hover {
+    color: red;
+}
 
-/*4a - настройки заголовков на странице товара*/
+/*Страница товара*/
 
 .product h3 {
     color: black;
@@ -27,7 +56,6 @@ body {
     background-color: #eaeaea;
 }
 
-/*4b - настройки текста краткого описания товара*/
 
 .short_description p,
 .short_description ul {
@@ -37,7 +65,7 @@ body {
     line-height: 16px;
 }
 
-/*4c - настройки текста полного описания товара*/
+
 
 .long_description p,
 .long_description ul {
@@ -48,7 +76,6 @@ body {
     text-align: left;
 }
 
-/*4d - настройки списка в разделе Характеристики товара*/
 
 .charact ul {
     font-family: sans-serif;
@@ -57,9 +84,27 @@ body {
 
 }
 
-/*5  настройки страницы Контакты и полей ввода*/
+.short_description{
+    height: auto;
 
-/*5а - значения ширины и высоты полей ввода*/
+
+}
+
+.short_description img{
+    width: 200px;
+    float:left;
+    margin: 10px;
+}
+
+.short_description button:hover{
+    background-color: aquamarine;
+}
+
+.short_description button:active{
+    background-color: red;
+}
+
+
 
 input {
     width: 300px;
@@ -67,12 +112,24 @@ input {
 }
 
 textarea {
-    width: 40%;
+    width: 60%;
 }
 
 button {
-    width: 10%;
-    font-weight: bold
+    width: 80px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 2px;
+    
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 /*5b - стили для текста внутри полей input*/
@@ -85,8 +142,8 @@ textarea {
     color: darkblue;
 }
 
-input[type="email"]:focus{
-    color:aqua;
+input[type="email"]:focus {
+    color: aqua;
     background-color: azure;
 }
 
@@ -94,31 +151,60 @@ input[type="text"] {
     text-transform: capitalize;
 }
 
-table{
+table {
     width: 400px;
-	height: 300px;
-	border: 1px solid #000;
-	border-collapse: collapse;
-}
-td{
+    height: 300px;
     border: 1px solid #000;
-	padding-left: 10px;
-	padding-right: 10px;
-
-	text-align: center;
+    border-collapse: collapse;
 }
 
-/*6*/
+td {
+    border: 1px solid #000;
+    padding-left: 10px;
+    padding-right: 10px;
 
-/*7*/
-
-.cat img[alt] {
-    width: 20%;
+    text-align: center;
 }
 
-.product img {
-    width: 30%;
-    border-color: darkgray;
-    border-style: double;
-    border-width: (3px 3px);
+/*Страница каталога*/
+.catalog{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+.catalog_item{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.catalog_item img{
+    height:100px;
+    width: 100px;
+    display:flex;
+}
+
+.map {
+
+    height: 374px;
+    display: flex;
+}
+
+.footer {
+    border-top: 1px solid black;
+    height: 50px;
+    background-color: azure;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.footertext {
+    display: flex;
+    padding-right: 5px;
+    padding-top: 5px;
 }
